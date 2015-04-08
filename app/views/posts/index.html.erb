@@ -1,0 +1,21 @@
+<h1>Index of Posts</h1>
+
+<%= link_to "Create a new post", new_post_path %>
+
+<% @posts.each do |post| %>
+	<div style="margin-bottom: 20px; border-top: 2px solid #e4d7fd">
+		<p>
+			<strong><%= post.title %></strong> - 
+			<% if post.published %>
+				Published
+			<% else %>
+				Unpublished
+			<% end %>
+		</p>
+
+		<p>
+			<%= post.content %>
+		</p>
+		<%= link_to "Show", post %>
+	</div>
+<% end %>

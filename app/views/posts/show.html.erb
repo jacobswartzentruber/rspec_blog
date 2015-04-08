@@ -1,0 +1,17 @@
+<h1>Show Post</h1>
+
+<p>
+	<strong><%= @post.title %></strong> -
+
+	<% if @post.published %>
+		Published
+	<% else %>
+		Unpublished
+	<% end %>
+</p>
+
+<p>
+	<%= @post.content %>
+</p>
+
+<%= link_to "Back to Index Page", posts_path %>
