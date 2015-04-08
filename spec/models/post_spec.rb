@@ -2,8 +2,6 @@ require 'rails_helper'
 
 RSpec.describe Post, type: :model do
 
-
-
   it "has a valid factory" do
   	expect(build(:post)).to be_valid
   end
@@ -19,4 +17,5 @@ RSpec.describe Post, type: :model do
   it "is unpublished when created" do
   	expect(build(:post).published).to eq(false)
   end
+
 end
